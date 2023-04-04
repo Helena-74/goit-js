@@ -1,0 +1,160 @@
+// task 1-2
+// Запиши умову в інструкції if таким чином, щоб функція працювала правильно.
+
+// Оголошена функція checkAge(age).
+// У виразі перевірки віку використаний оператор >=
+// Виклик checkAge(20) повертає "You are an adult"
+// Виклик checkAge(8) повертає "You are a minor"
+// Виклик checkAge(14) повертає "You are a minor"
+// Виклик checkAge(38) повертає "You are an adult"
+// В тілі функції є тільки одна інструкція if
+// В тілі функції відсутні інструкції else або else if
+
+// function checkAge(age) { 
+//     if (age >= 18) { // Change this line
+//     return "You are an adult";
+//     }  
+//     return "You are a minor";
+// }
+// console.log(checkAge(20));
+// console.log(checkAge(8));
+// console.log(checkAge(14));
+// console.log(checkAge(38));
+
+// task 2-2
+// Функція checkPassword отримує пароль користувача у параметр password, перевіряє його 
+// на збіг з паролем адміністратора у змінній ADMIN_PASSWORD і повертає повідомлення 
+// про результат порівняння.
+
+// Виконай рефакторинг коду функції checkPassword, використовуючи патерн «раннє повернення»:
+
+// видали змінну message
+// видали else
+// код повинен працювати так само, як і до оптимізації
+// Оголошена функція checkPassword(password)
+// Виклик checkPassword("mangohackzor") повертає "Access denied, wrong password!"
+// Виклик checkPassword("polyhax") повертає "Access denied, wrong password!"
+// Виклик checkPassword("jqueryismyjam") повертає "Welcome!"
+
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = "jqueryismyjam";
+//     // Change code below this line
+
+//     if (password === ADMIN_PASSWORD) {
+//         return "Welcome!";
+//     }
+//         return "Access denied, wrong password!";
+    
+//     // Change code above this line
+// }
+// console.log(checkPassword("mangohackzor"));
+// console.log(checkPassword("polyhax"));
+// console.log(checkPassword("jqueryismyjam"));
+
+// task 3-2
+// Функція checkStorage перевіряє можливість оформлення замовлення 
+// і повертає повідомлення про результат. Вона приймає два параметри, 
+// значення яких будуть задаватися під час її виклику.
+
+// available - доступна кількість товарів на складі
+// ordered - кількість одиниць товару в замовленні
+// Виконай рефакторинг коду функції checkStorage, використовуючи 
+// патерн «раннє повернення».
+
+// Оголошена функція checkStorage(available, ordered)
+// Виклик checkStorage(100, 50) повертає "The order is accepted, our manager will contact you"
+// Виклик checkStorage(100, 130) повертає "Your order is too large, not enough goods in stock!"
+// Виклик checkStorage(70, 0) повертає "Your order is empty!"
+// Виклик checkStorage(200, 20) повертає "The order is accepted, our manager will contact you"
+// Виклик checkStorage(200, 250) повертає "Your order is too large, not enough goods in stock!"
+// Виклик checkStorage(150, 0) повертає "Your order is empty!"
+
+// function checkStorage(available, ordered) {
+//     // Change code below this line
+
+//     if (ordered === 0) {
+//         return "Your order is empty!";
+//     }
+//     if (ordered > available) {
+//         return "Your order is too large, not enough goods in stock!";
+//     }
+//         return "The order is accepted, our manager will contact you";
+
+//     // Change code above this line
+// }
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(70, 0));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 250));
+// console.log(checkStorage(150, 0));
+
+// task 4-2
+// Оголоси змінну fruits і присвой їй масив фруктів - 
+// рядків "apple", "plum", "pear" і "orange".
+
+// Оголошена змінна fruits
+// Значення змінної fruits - це масив ["apple", "plum", "pear", "orange"]
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+// console.log(fruits);
+
+// task 5-2
+// Оголоси три змінні і присвой кожній з них значення, використовуючи 
+// нотацію квадратних дужок.
+
+// Ім'я змінної	Значення змінної
+// firstElement	перший елемент масиву
+// secondElement	другий елемент масиву
+// lastElement	останній елемент масиву
+// Оголошена змінна firstElement
+// Значення змінної firstElement - це рядок "apple"
+// Оголошена змінна secondElement
+// Значення змінної secondElement - це рядок "plum"
+// Оголошена змінна lastElement
+// Значення змінної lastElement - це рядок "orange"
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+// const firstElement = fruits[0];
+// console.log(firstElement);
+// const secondElement = fruits[1];
+// console.log(secondElement);
+// const lastElement = fruits[3];
+// console.log(lastElement);
+
+// task 6-2
+// Виконай перевизначення значення елементів з індексами 1 і 3. 
+// Заміни "plum" на "peach", а "orange" на "banana".
+
+// Оголошена змінна fruits
+// Значення змінної fruits - це масив ["apple", "peach", "pear", "banana"]
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+// fruits[1] = "peach";
+// fruits[3] = "banana";
+// console.log(fruits);
+
+// task 7-2
+// Оголоси змінну fruitsArrayLength і присвой їй довжину масиву 
+// fruits, використовуючи властивість length.
+
+// Оголошена змінна fruitsArrayLength
+// Значення змінної fruitsArrayLength - це число 4
+
+// const fruits = ["apple", "peach", "pear", "banana"];
+// const fruitsArrayLength = fruits.length;
+// console.log(fruitsArrayLength);
+
+// task 8-2
+// Оголоси дві зміні:
+
+// Ім'я змінної	Очікуване значення
+// lastElementIndex	Індекс останнього елемента масиву fruits через 
+// довжина_масиву - 1
+// lastElement	Значення останнього елемента масиву
+// Оголошена змінна lastElementIndex
+// Значення змінної lastElementIndex - це число 3
+// Оголошена змінна lastElement
+// Значення змінної lastElement - це рядок "banana"
+
+const fruits = ["apple", "peach", "pear", "banana"];
