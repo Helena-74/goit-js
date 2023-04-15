@@ -806,3 +806,74 @@
 // console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
 // console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
 // console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
+
+
+
+// Напишіть функцію, яка приймає два аргументи і повертає всі числа, які діляться на дільник. Перший аргумент – це масив чисел, а другий – дільник.
+// console.log(func([1, 2, 3, 4, 5, 6, 7, 8], 2));
+
+// ???????
+// function divisors(array, divisor) {
+//     let result = [];
+//     for (let i = 0; i < array.length; i++) {
+//       if (array[i] % divisor === 0) {
+//         result.push(array[i]);
+//       }
+//     }
+
+//     return result;
+//   }
+
+//   function divisors(array, divisor) {
+//     let result = [];
+//     for (const number of array) {
+//       if (number % divisor === 0) {
+//         result.push(number);
+//       }
+//     }
+
+//     return result;
+//   }
+
+//   function divisors(array, divisor) {
+//     let result = [];
+
+//     array.forEach(element => {
+//       if (element % divisor === 0) {
+//         result.push(element);
+//       }
+//     });
+
+//     return result;
+//   }
+
+//   function divisors(array, divisor) {
+//     return array.filter(element => element % divisor === 0);
+//   }
+
+// ????
+// Напишіть ф-цію calcTotalPrice(stones, stonesName),
+// яка приймає масив об'єктів та
+// рядок під назвою каменю.
+// Функція  повертає загальну вартість каменів
+// з таким ім'ям, ціною та кількістю з об'єкта
+// const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
+// Alexander 11:46
+// function calcTotalPrice(stones, stonesName) {
+//   let totalPrice = 0;
+//   let newStone = {};
+//   for (const stone of stones) {
+//     if (stone.name === stonesName) {
+//       totalPrice += stone.price * stone.quantity;
+//       newStone = stone;
+//       newStone["total"] = totalPrice;
+//     }
+//   }
+
+//   return `${newStone.name}: ${newStone.price} * ${newStone.quantity} = ${newStone.total}`;
+// }

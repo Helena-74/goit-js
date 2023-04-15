@@ -954,12 +954,165 @@
 // Для передачі аргументів методу Math.max() використовується синтаксис ... на масиві scores
 // Для передачі аргументів методу Math.min() використовується синтаксис ... на масиві scores
 
-const scores = [89, 64, 42, 17, 93, 51, 26];
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max( ... scores);
+// const worstScore = Math.min( ... scores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+// task 28-3
+// У змінних firstGroupScores, secondGroupScores і thirdGroupScores зберігаються результати 
+// тестування окремих груп. Використовуючи розподіл, доповни код таким чином, щоб:
+
+// У змінній allScores зберігався масив всіх результатів від першої до третьої групи.
+// У змінній bestScore був найвищий загальний бал.
+// У змінній worstScore був найнижчий загальний бал.
+// Оголошена змінна firstGroupScores
+// Значення змінної firstGroupScores - це масив [64, 42, 93]
+// Оголошена змінна secondGroupScores
+// Значення змінної secondGroupScores - це масив [89, 14, 51, 26]
+// Оголошена змінна thirdGroupScores
+// Значення змінної thirdGroupScores - це масив [29, 47, 18, 97, 81]
+// Оголошена змінна allScores.
+// Значення змінної allScores - це масив [64, 42, 93, 89, 14, 51, 26, 29, 47, 18, 97, 81]
+// Оголошена змінна bestScore
+// Значення змінної bestScore - це число 97
+// Оголошена змінна worstScore
+// Значення змінної worstScore - це число 14
+// Для присвоєння значення змінної allScores використовувався синтаксис ... для заповнення масиву
+// Для передачі аргументів методу Math.max() використовується синтаксис ... на масиві allScores
+// Для передачі аргументів методу Math.min() використовується синтаксис ... на масиві allScores
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [... firstGroupScores, ... secondGroupScores, ... thirdGroupScores];
+// const bestScore = Math.max( ... allScores);
+// const worstScore = Math.min(... allScores);
+
+// console.log(firstGroupScores);
+// console.log(secondGroupScores);
+// console.log(thirdGroupScores);
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+// task 29-3
+// В конструкторі можна створювати нові тести, для яких є налаштування за замовчуванням, які зберігаються 
+// у змінній defaultSettings. Під час створення тесту, усі або частину налаштувань можна перевизначити, 
+// вони зберігаються у змінній overrideSettings.
+
+// Для того щоб отримати фінальні налаштування тесту, необхідно взяти налаштування за замовчуванням 
+// і поверх них застосувати перевизначені налаштування. Доповни код таким чином, щоб у змінній finalSettings 
+// утворився об'єкт фінальних налаштувань тесту.
+
+// Оголошена змінна defaultSettings
+// Значення змінної defaultSettings - це об'єкт
+// Оголошена змінна overrideSettings
+// Значення змінної overrideSettings - це об'єкт
+// Оголошена змінна finalSettings
+// Значення змінної finalSettings - це об'єкт
+// Значення властивості finalSettings.theme дорівнює "light"
+// Значення властивості finalSettings.public дорівнює "false"
+// Значення властивості finalSettings.withPassword дорівнює "true"
+// Значення властивості finalSettings.minNumberOfQuestions дорівнює 10
+// Значення властивості finalSettings.timePerQuestion дорівнює 30
+// Для присвоєння значення змінній finalSettings використовується синтаксис ...
+
+// const defaultSettings = {
+//     theme: "light",
+//     public: true,
+//     withPassword: false,
+//     minNumberOfQuestions: 10,
+//     timePerQuestion: 60,
+// };
+// const overrideSettings = {
+// public: false,
+// withPassword: true,
+// timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+// console.log(defaultSettings);
+// console.log(overrideSettings);
+// console.log(finalSettings);
+// console.log(finalSettings.theme);
+// console.log(finalSettings.public);
+// console.log(finalSettings.withPassword);
+// console.log(finalSettings.minNumberOfQuestions);
+// console.log(finalSettings.timePerQuestion);
+
+// task 30-3
+// Напиши функцію makeTask(data) яка приймає один параметр data - об'єкт з наступними властивостями.
+
+// text - текст завдання.
+// category - категорія завдання.
+// priority - пріоритет завдання.
+// Функція повинна створити і повернути новий об'єкт завдання, не змінюючи напряму параметр data. 
+// У новому об'єкті повинна бути властивість completed, значення якої зберігається в однойменній 
+// локальній змінній.
+
+// В параметрі data гарантовано буде тільки властивість text, а інші дві, category і priority, 
+// можуть бути відсутніми. Тоді, в новому об'єкті завдання, у властивостях category і priority 
+// повинні бути значення за замовчуванням, що зберігаються в однойменних локальних змінних.
+
+// Оголошена функція makeTask(data)
+// Виклик makeTask({}) повертає { category: "General", priority: "Normal", completed: false }
+// Виклик makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }) 
+// повертає { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+// Виклик makeTask({ category: "Finance", text: "Take interest" }) повертає 
+// { category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+// Виклик makeTask({ priority: "Low", text: "Choose shampoo" }) повертає 
+// { category: "General", priority: "Low", text: "Choose shampoo", completed: false }
+// Виклик makeTask({ text: "Buy bread" }) повертає 
+// { category: "General", priority: "Normal", text: "Buy bread", completed: false }
+
+// function makeTask(data) {
+// const completed = false;
+// const category = "General";
+// const priority = "Normal";
+// // Change code below this line
+// const defaultObject = {
+//     completed,
+//     category,
+//     priority,
+// };
+// const newObject = { ... defaultObject, ... data}
+// return newObject;
+// // Change code above this line
+// }
+// console.log(makeTask({}));
+// console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+// console.log(makeTask({ category: "Finance", text: "Take interest" }));
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+// console.log(makeTask({ text: "Buy bread" }));
+
+// task 31-3
+// Використовуючи операцію rest, доповни код функції add() таким чином, щоб вона приймала 
+// будь-яку кількість аргументів, рахувала і повертала їх суму.
+
+// Оголошена функція add
+// Функція add використовує параметр args
+// Для збирання аргументів у змінну args, у підписі функції використовується синтаксис 
+// ... (оператор rest)
+// Виклик add(15, 27) повертає 42
+// Виклик add(12, 4, 11, 48) повертає 75
+// Виклик add(32, 6, 13, 19, 8) повертає 78
+// Виклик add(74, 11, 62, 46, 12, 36) повертає 241
+
 // Change code below this line
-const bestScore = Math.max( ... scores);
-const worstScore = Math.min( ... scores);
-console.log(bestScore);
-console.log(worstScore);
+function add( ... args) {
+
+}
+console.log(add(15, 27));
+// console.log(add(12, 4, 11, 48));
+// console.log(add(32, 6, 13, 19, 8));
+// console.log(add(74, 11, 62, 46, 12, 36));
+
+
+
 
 
 
