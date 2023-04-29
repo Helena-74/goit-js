@@ -2734,3 +2734,5 @@
 // // Change code above this line
 // console.table(getTotalBalanceByGender(users, "male"));
 // console.table(getTotalBalanceByGender(users, "female"));
+
+
